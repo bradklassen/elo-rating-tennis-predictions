@@ -1,2 +1,3 @@
-# elo-rating-tennis-predictions
-Using Elo Ratings to predict tennis matches.
+# Elo Rating Tennis Predictions
+
+The goal of the project is to accurately predict upcoming tennis matches. The data consists of 2019 singles tennis results split randomly (~70% for training, ~30% for testing). Elo Ratings are used to evaluate the strength and ranking of each player which is then used to predict the probability that player 1 will win the matches in the testing data. A win margin multplier has been added to the Elo Rating functions to account for the difference in the number of games won by each player. Multiple win multipliers were tested using cross-validation and hyperparameter tuning. Using k-fold cross-validation, the original 70% training data is split further into training and testing folds while the original 30% testing data is used as the evaluation data. The optimal win multiplier uses a natural logarithm function and was used to get the probability of player 1 winning in the evaluation data.
